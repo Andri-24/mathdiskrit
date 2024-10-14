@@ -215,7 +215,7 @@ Algoritma ini membuat matriks nxn yang diisi dengan angka nol. Algoritma ini mel
 
 
 ## 5. Referensi
-1.https://www.gramedia.com/literasi/pengertian-algoritma/#google_vignette
+1. https://www.gramedia.com/literasi/pengertian-algoritma/#google_vignette
 2. https://yuliana.lecturer.pens.ac.id/Struktur%20Data%20C/Prak%20SD%20-%20pdf/Praktikum%2011.pdf
 3. https://revou.co/kosakata/pseudocode
 4. https://www.designgurus.io/blog/big-o-algorithm-complexity
