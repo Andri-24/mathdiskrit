@@ -16,9 +16,11 @@ Biasanya menggunakan huruf kapital seperti A,B,C,S, dan T untuk merepresentasika
 Contoh , mengatakan x $\in$ R adalah cara lain untuk mengatakan x adalah bilangan riil.
 
 Kita dapat menggunakan notasi set-builder himpunan untuk menjelaskan suatu himpunan. Misalnya, himpunan bilangan asli didefinisikan sebagai
+
 $$
 N = \{ x \in \mathbb{Z} \mid x > 0 \}.
 $$
+
 Di sini, garis vertikal \( | \) dibaca sebagai “sedemikian rupa sehingga” atau “untuk yang mana.” Oleh karena itu, ruas kanan persamaan diucapkan sebagai “himpunan” yang termasuk dalam himpunan bilangan bulat sedemikian rupa sehingga \( x > 0 \) atau cukup “himpunan bilangan bulat \( x \) sedemikian rupa sehingga \( x > 0 \).” Secara umum, metode deskriptif dinyatakan dengan
 
 $$
@@ -38,19 +40,19 @@ $$
 
 ### A. Notasi Himpunan Bilangan Tertentu
 
-\begin{align*}
+$$\begin{align*}
 \mathbb{N} & = \text{himpunan bilangan asli,} \\
 \mathbb{Z} & = \text{himpunan bilangan bulat,} \\
 \mathbb{Q} & = \text{himpunan bilangan rasional,} \\
 \mathbb{R} & = \text{himpunan bilangan riil.}
-\end{align*}
+\end{align*}$$
 
 Himpunan tak terhingga - elemen tak terhingga. Himpunan terhingga - mengandung banyak elemen tertentu. Bilangan asli dan bilangan bulat saat mendefinisikan bilangan rasional, riil, dan irasional.
 
-\begin{align*}
+$$\begin{align*}
 \mathbb{N} & = \{1, 2, 3, \ldots\} \\
 \mathbb{Z} & = \{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\}
-\end{align*}
+\end{align*}$$
 
 
 ### B. Definisi Bilangan Rasional
