@@ -85,7 +85,7 @@ $$
 \end{align*}
 $$
 
-Akan tetapi, kita tidak dapat menuliskan \( (a, \infty] \) atau \( [-\infty, a) \).
+Akan tetapi, kita tidak dapat menuliskan $(a, \infty) atau ( -\infty, a)$.
 
 Perhatikan bahwa \( [a,b] \) disebut interval tertutup dari \( a \) ke \( b \) dan \( (a,b) \) disebut interval terbuka dari \( a \) ke \( b \).
 
