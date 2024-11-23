@@ -173,33 +173,58 @@ $$= \frac{10(10+1)}{2} = 55$$
 
 ### Latihan Soal
 
-1. **Tentukan nilai** $\sum_{k=1}^{8}2^k + \sum_{k=2}^{8}(-3)^k$
+1. **Tentukan nilai**
+$$
+\sum_{k=1}^{8} 2^k + \sum_{k=2}^{8} (-3)^k
+$$
+Untuk menyelesaikan soal ini, kita dapat langsung menghitung setiap sumasi:
+$$
+\sum_{k=1}^{8} 2^k = 2^1 + 2^2 + \dots + 2^8 = 254
+$$
+$$
+\sum_{k=2}^{8} (-3)^k = (-3)^2 + (-3)^3 + \dots + (-3)^8 = 1640
+$$
+Jadi, nilai totalnya adalah:
+$$
+254 + 1640 = 1894
+$$
 
-   Untuk menyelesaikan soal ini, kita dapat langsung menghitung setiap sumasi:
-   $$\sum_{k=1}^{8}2^k = 2^1 + 2^2 + ... + 2^8 = 254$$
-   $$\sum_{k=2}^{8}(-3)^k = (-3)^2 + (-3)^3 + ... + (-3)^8 = 1640$$
-   Jadi, nilai totalnya adalah: 
-   $$254 + 1640 = 1894$$
+2. **Tentukan nilai** 
+$$
+\sum_{i=0}^{2} \sum_{j=0}^{3} (2i + 3j)
+$$
+Kita akan menghitung sumasi dalam terlebih dahulu, lalu sumasi luar:
+$$
+\sum_{i=0}^{2} \left[ (2i+0) + (2i+3) + (2i+6) + (2i+9) \right]
+$$
+$$
+= \sum_{i=0}^{2} (8i + 18)
+$$
+$$
+= (8 \cdot 0 + 18) + (8 \cdot 1 + 18) + (8 \cdot 2 + 18) = 90
+$$
 
-2. **Tentukan nilai** $\sum_{i=0}^{2}\sum_{j=0}^{3}(2i+3j)$
-
-   Kita akan menghitung sumasi dalam terlebih dahulu, lalu sumasi luar:
-   $$\sum_{i=0}^{2}\sum_{j=0}^{3}(2i+3j) = \sum_{i=0}^{2}[(2i+0) + (2i+3) + (2i+6) + (2i+9)]$$
-   $$= \sum_{i=0}^{2}(8i+18) = (8*0+18) + (8*1+18) + (8*2+18) = 90$$
-
-3. **Tentukan nilai** $\sum_{i=0}^{3}\sum_{j=0}^{2}i$
-
-   Perhatikan bahwa nilai `i` tidak bergantung pada `j`. Kita bisa keluarkan `i` dari sumasi dalam:
-   $$\sum_{i=0}^{3}\sum_{j=0}^{2}i = \sum_{i=0}^{3}i \cdot \sum_{j=0}^{2} 1$$
-   $$\sum_{j=0}^{2} 1 = 3` (karena kita menjumlahkan 1 sebanyak 3 kali)
-   Jadi, 
-\sum_{i=0}^{3}\sum_{j=0}^{2}i = 3 \cdot \sum_{i=0}^{3} i = 3 \cdot (0+1+2+3) = 18$$
+3. **Tentukan nilai** 
+$$
+\sum_{i=0}^{3} \sum_{j=0}^{2} i
+$$
+Perhatikan bahwa nilai \(i\) tidak bergantung pada \(j\). Kita bisa keluarkan \(i\) dari sumasi dalam:
+$$
+\sum_{i=0}^{3} \sum_{j=0}^{2} i = \sum_{i=0}^{3} i \cdot \sum_{j=0}^{2} 1
+$$
+$$
+\sum_{j=0}^{2} 1 = 3 \quad \text{(karena kita menjumlahkan 1 sebanyak 3 kali)}
+$$
+Jadi,
+$$
+\sum_{i=0}^{3} \sum_{j=0}^{2} i = 3 \cdot \sum_{i=0}^{3} i = 3 \cdot (0 + 1 + 2 + 3) = 18
+$$
 
 **Jawaban:**
 
-1. Nilai dari $\sum_{k=1}^{8}2^k + \sum_{k=2}^{8}(-3)^k$ adalah **1894**.
-2. Nilai dari $\sum_{i=0}^{2}\sum_{j=0}^{3}(2i+3j)$ adalah **90**.
-3. Nilai dari $\sum_{i=0}^{3}\sum_{j=0}^{2}i$ adalah **18**.
+1. Nilai dari $\sum_{k=1}^{8} 2^k + \sum_{k=2}^{8} (-3)^k$ adalah ***1894***.
+2. Nilai dari $\sum_{i=0}^{2} \sum_{j=0}^{3} (2i + 3j)$ adalah ***90***.
+3. Nilai dari $\sum_{i=0}^{3} \sum_{j=0}^{2} i$ adalah ***18***.
 
 ## D. Rekursif
 
