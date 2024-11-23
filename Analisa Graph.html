@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Social Network Analysis &#8212; My sample book</title>
+    <title>Analisa Graph &#8212; My sample book</title>
   
   
   
@@ -57,9 +57,12 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Analisa Graph';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Deretan dan Rekursif" href="Deretan%20dan%20Rekursif.html" />
     <link rel="prev" title="Aljabar Boolean dan Gerbang Logika" href="Aljabar%20Boolean%20dan%20Gerbang%20Logika.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -183,11 +186,8 @@
 <li class="toctree-l1"><a class="reference internal" href="Logika%20dan%20Pembuktian.html">Logika Matematika</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Algoritma.html">Algoritma</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Aljabar%20Boolean%20dan%20Gerbang%20Logika.html">Aljabar Boolean dan Gerbang Logika</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Social Network Analysis</a></li>
-
-
-
-
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Analisa Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Deretan%20dan%20Rekursif.html">Deretan dan Rekursif</a></li>
 </ul>
 
     </div>
@@ -373,7 +373,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Social Network Analysis</h1>
+    <h1>Analisa Graph</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -383,13 +383,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Social Network Analysis</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#degree-centrality">Degree Centrality</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#betweeness-centrality">Betweeness Centrality</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#closeness-centrality">Closeness Centrality</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenvector-centrality">Eigenvector Centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-social-network-analysis">A. Social Network Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-jenis-jenis-centrality">B. Jenis-Jenis Centrality</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#degree-centrality">1. Degree Centrality</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#closeness-centrality">2. Closeness Centrality</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#betweenness-centrality">3. Betweenness Centrality</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenvector-centrality">4. Eigenvector Centrality</a></li>
 </ul>
-
+</li>
+</ul>
             </nav>
         </div>
     </div>
@@ -400,8 +402,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="social-network-analysis">
-<h1>Social Network Analysis<a class="headerlink" href="#social-network-analysis" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="analisa-graph">
+<h1>Analisa Graph<a class="headerlink" href="#analisa-graph" title="Link to this heading">#</a></h1>
+<section id="a-social-network-analysis">
+<h2>A. Social Network Analysis<a class="headerlink" href="#a-social-network-analysis" title="Link to this heading">#</a></h2>
 <p>Social Network Analysis merupakan bidang kajian yang mengekplorasitentang hubungan manusia dengan menggunakan teori graf. Implementasi Social Network Analysis dapat menjelaskan relasi atau hubungan antar aktor melalui visualisasi berbentuk graf. Relasi dalam analisis jaringan sosial dapat diproses dalam bentuk perhitungan yang disebut centrality dalam sebuah jaringan sosial sesuai dengan posisi masing-masing aktor di dalam struktur jaringan tersebut</p>
 <p><img alt="image" src="https://hackmd.io/_uploads/r1VbYk_MJe.png" /></p>
 <p><strong>Social network</strong>
@@ -420,23 +424,60 @@ graph</em></p>
 <li><p>Centrality adalah penentuan aktor menggunakan ukuran pada Social Network Centrality dalam teori graf dan social network .Dibagi menjadi empat jenis,</p></li>
 </ol>
 <ul class="simple">
-<li><p>degree centrality,</p></li>
-<li><p>betweeness centrality,</p></li>
-<li><p>closeness centrality</p></li>
-<li><p>eigenvector centrality</p></li>
+<li><p>Degree Centrality,</p></li>
+<li><p>Betweeness Centrality,</p></li>
+<li><p>Closeness Centrality</p></li>
+<li><p>Eigenvector Centrality</p></li>
 </ul>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="degree-centrality">
-<h1>Degree Centrality<a class="headerlink" href="#degree-centrality" title="Link to this heading">#</a></h1>
+<section id="b-jenis-jenis-centrality">
+<h2>B. Jenis-Jenis Centrality<a class="headerlink" href="#b-jenis-jenis-centrality" title="Link to this heading">#</a></h2>
+<section id="degree-centrality">
+<h3>1. Degree Centrality<a class="headerlink" href="#degree-centrality" title="Link to this heading">#</a></h3>
+<p>Degree centrality adalah jumlah koneksi (<em>edges</em>) yang terhubung pada suatu simpul (<em>node</em>). Semakin tinggi derajat koneksi sebuah node, semakin penting posisinya dalam jaringan. Rumus degree centrality adalah:</p>
+<p><span class="math notranslate nohighlight">\(C_D(v) = \text{degree}(v)\)</span></p>
+<p>Normalisasi untuk degree centrality adalah:</p>
+<p><span class="math notranslate nohighlight">\(C_D^\text{norm}(v) = \frac{\text{degree}(v)}{n-1}\)</span></p>
+<p>di mana <span class="math notranslate nohighlight">\(n\)</span> adalah jumlah total simpul dalam graf.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="betweeness-centrality">
-<h1>Betweeness Centrality<a class="headerlink" href="#betweeness-centrality" title="Link to this heading">#</a></h1>
+<section id="closeness-centrality">
+<h3>2. Closeness Centrality<a class="headerlink" href="#closeness-centrality" title="Link to this heading">#</a></h3>
+<p>Closeness centrality mengukur kedekatan rata-rata satu simpul ke simpul lainnya dalam jaringan. Simpul dengan closeness yang tinggi dapat menyebarkan informasi lebih cepat. Rumusnya:</p>
+<p><span class="math notranslate nohighlight">\(C_C(v) = \frac{1}{\sum_{u \neq v} d(u, v)}\)</span></p>
+<p>Normalisasi untuk closeness centrality adalah:</p>
+<p><span class="math notranslate nohighlight">\(C_C^\text{norm}(v) = \frac{n-1}{\sum_{u \neq v} d(u, v)}\)</span></p>
+<p>di mana <span class="math notranslate nohighlight">\(d(u, v)\)</span> adalah jarak terpendek antara simpul <span class="math notranslate nohighlight">\(u\)</span> dan <span class="math notranslate nohighlight">\(v\)</span>, dan <span class="math notranslate nohighlight">\(n\)</span> adalah jumlah total simpul dalam graf.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="closeness-centrality">
-<h1>Closeness Centrality<a class="headerlink" href="#closeness-centrality" title="Link to this heading">#</a></h1>
+<section id="betweenness-centrality">
+<h3>3. Betweenness Centrality<a class="headerlink" href="#betweenness-centrality" title="Link to this heading">#</a></h3>
+<p>Betweenness centrality mengukur seberapa sering sebuah simpul menjadi perantara dalam jalur terpendek antara dua simpul lain. Rumus:</p>
+<p><span class="math notranslate nohighlight">\(C_B(v) = \sum_{s \neq v \neq t} \frac{\sigma_{st}(v)}{\sigma_{st}}\)</span></p>
+<p>Normalisasi untuk betweenness centrality adalah:</p>
+<p><span class="math notranslate nohighlight">\(C_B^\text{norm}(v) = \frac{C_B(v)}{(n-1)(n-2)/2}\)</span></p>
+<p>di mana:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\sigma_{st}\)</span> adalah jumlah jalur terpendek antara <span class="math notranslate nohighlight">\(s\)</span> dan <span class="math notranslate nohighlight">\(t\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sigma_{st}(v)\)</span> adalah jumlah jalur tersebut yang melalui <span class="math notranslate nohighlight">\(v\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(n\)</span> adalah jumlah total simpul dalam graf.</p></li>
+</ul>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="eigenvector-centrality">
-<h1>Eigenvector Centrality<a class="headerlink" href="#eigenvector-centrality" title="Link to this heading">#</a></h1>
+<section id="eigenvector-centrality">
+<h3>4. Eigenvector Centrality<a class="headerlink" href="#eigenvector-centrality" title="Link to this heading">#</a></h3>
+<p>Eigenvector centrality mengukur pentingnya sebuah simpul berdasarkan koneksi dengan simpul lain yang juga penting. Rumusnya berbasis eigenvector dari matriks adjensi <span class="math notranslate nohighlight">\(A\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(Ax = \lambda x\)</span></p>
+<p>di mana:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A\)</span> adalah matriks adjensi graf,</p></li>
+<li><p><span class="math notranslate nohighlight">\(x\)</span> adalah eigenvector yang menunjukkan centrality dari simpul,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lambda\)</span> adalah nilai eigen terbesar.</p></li>
+</ul>
+<p>Normalisasi untuk eigenvector centrality dilakukan dengan membagi setiap komponen <span class="math notranslate nohighlight">\(x_i\)</span> dengan norma total eigenvector <span class="math notranslate nohighlight">\(x\)</span>:</p>
+<p><span class="math notranslate nohighlight">\(C_E^\text{norm}(v_i) = \frac{x_i}{\sum_{j=1}^n x_j}\)</span></p>
+<p>di mana <span class="math notranslate nohighlight">\(x_i\)</span> adalah nilai eigenvector untuk simpul <span class="math notranslate nohighlight">\(i\)</span>, dan <span class="math notranslate nohighlight">\(\sum_{j=1}^n x_j\)</span> adalah total nilai eigenvector.</p>
+<hr class="docutils" />
+<p>Semua ukuran di atas digunakan untuk menganalisis jaringan sosial dan mengidentifikasi simpul yang paling signifikan dalam penyebaran informasi atau fungsi jaringan lainnya.</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -478,6 +519,15 @@ graph</em></p>
         <p class="prev-next-title">Aljabar Boolean dan Gerbang Logika</p>
       </div>
     </a>
+    <a class="right-next"
+       href="Deretan%20dan%20Rekursif.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Deretan dan Rekursif</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -494,13 +544,15 @@ graph</em></p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Social Network Analysis</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#degree-centrality">Degree Centrality</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#betweeness-centrality">Betweeness Centrality</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#closeness-centrality">Closeness Centrality</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenvector-centrality">Eigenvector Centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-social-network-analysis">A. Social Network Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-jenis-jenis-centrality">B. Jenis-Jenis Centrality</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#degree-centrality">1. Degree Centrality</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#closeness-centrality">2. Closeness Centrality</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#betweenness-centrality">3. Betweenness Centrality</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eigenvector-centrality">4. Eigenvector Centrality</a></li>
 </ul>
-
+</li>
+</ul>
   </nav></div>
 
 </div></div>
