@@ -8,7 +8,7 @@ title: UAS
 ## Nama = Mohammad Andri Firmansyah
 ## NPM = 24-139
 
-## 1.
+## 1. Soal Nomor 1
 $$
 \begin{array}{|c|c|c|c|c|c|c|}
 \hline
@@ -25,20 +25,18 @@ P & Q & R & S & P \to Q & R \to S &(P \to Q) \to (R \to S) \\ \hline
 $$
 
 
-## 2.
+## 2. Soal Nomor 2
 
-![WhatsApp Image 2024-12-09 at 14.35.09_738723d0](https://hackmd.io/_uploads/ByLCaz4Eyx.jpg)
-
-
+![image](https://hackmd.io/_uploads/rJkKxNNNkl.png)
 
 
 ## Closesness Centrality
 
-7-1/1+1+2+2= 7/4= 1,75
+closeness Centrality pada node G: 0.4444444444444444
 
 ## Betweness centrality
 
-0
+Betweenness Centrality pada node F: 0.0
 
 
 
