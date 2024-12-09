@@ -8,33 +8,24 @@ title: UAS
 ## Nama = Mohammad Andri Firmansyah
 ## NPM = 24-139
 
-
-$$\begin{array}{c|c|c|c|cc}P&Q&R&\ S&(R\to\ Q)&\to(R\to\ S)\\\hline\text{1}&\text{0}&\text{1}&\text{0}&\text{0}&\text{0}\\\text{1}&\text{1}&\text{0}&\text{1}&\text{1}&\text{1}\\\text{1}&\text{0}&\text{0}&\text{1}&\text{0}&\text{0}\\\text{1}&\text{1}&\text{0}&\text{1}&\text{1}&\text{1}\\\text{0}&\text{0}&\text{1}&\text{1}&\text{1}&\text{1}\\\text{1}&\text{1}&\text{1}&\text{1}&\text{1}&\text{1}\\\text{1}&\text{1}&\text{1}&\text{0}&\text{1}&\text{1}\\\text{1}&\text{1}&\text{1}&\text{1}&\text{1}&\text{1}&\text{}\end{array}$$
-
-
-
-
-
-|$(R\to\ Q)\to (R\to\ S)$ |
-|-------- |
-|1   |
-|1   |
-|1   |
-|1   |
-|1   |
-|1   |
-|1   |
-|1   |
+## 1.
+$$
+\begin{array}{|c|c|c|c|c|c|c|}
+\hline
+P & Q & R & S & P \to Q & R \to S &(P \to Q) \to (R \to S) \\ \hline
+1 & 0 & 1 & 0 & 0 & 0 & 1 \\ \hline
+1 & 1 & 0 & 1 & 1 & 1 & 1 \\ \hline
+1 & 0 & 0 & 1 & 0 & 1 & 1 \\ \hline
+1 & 1 & 0 & 1 & 1 & 1 & 1 \\ \hline
+0 & 0 & 1 & 1 & 1 & 1 & 1 \\ \hline
+1 & 1 & 1 & 1 & 1 & 1 & 1 \\ \hline
+1 & 1 & 1 & 0 & 1 & 0 & 0 \\ \hline
+1 & 1 & 1 & 1 & 1 & 1 & 1 \\ \hline
+\end{array}
+$$
 
 
-
-
-
-
-
-
-
-# 2.
+## 2.
 
 ![WhatsApp Image 2024-12-09 at 14.35.09_738723d0](https://hackmd.io/_uploads/ByLCaz4Eyx.jpg)
 
